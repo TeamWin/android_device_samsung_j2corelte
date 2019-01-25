@@ -20,8 +20,8 @@ TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_USES_UNCOMPRESSED_KERNEL := true
 
-TARGET_PREBUILT_KERNEL := device/samsung/on5xelte/Image
-TARGET_PREBUILT_DTB := device/samsung/on5xelte/dt.img
+TARGET_PREBUILT_KERNEL := device/samsung/j2corelte/Image
+TARGET_PREBUILT_DTB := device/samsung/j2corelte/dt.img
 
 #BOOT image 
 
@@ -30,7 +30,7 @@ BOARD_KERNEL_BASE := 0x10000000
 BOARD_KERNEL_PAGESIZE := 2048
 # 000RU = recovery kernel, 000KU = system kernel
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --tags_offset 0x00000100 --board SRPPG18A000RU
-BOARD_CUSTOM_BOOTIMG_MK :=  device/samsung/on5xelte/bootimg.mk
+BOARD_CUSTOM_BOOTIMG_MK :=  device/samsung/j2corelte/bootimg.mk
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 33554432
