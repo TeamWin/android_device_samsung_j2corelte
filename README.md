@@ -1,8 +1,8 @@
-## TWRP device tree for Galaxy J5 Prime
+## TWRP device tree for Galaxy J2 Core 2018
 
-G570F is tested ,   other models not tested but it should work fine , they all share same cpu and board
+J260F not tested but it should work fine , they all share same cpu and board
 
-build using minimal  twrp 6.0
+build using minimal  twrp 8.1
 
 
 
