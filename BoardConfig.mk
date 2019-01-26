@@ -20,7 +20,7 @@ TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_USES_UNCOMPRESSED_KERNEL := true
 
-TARGET_PREBUILT_KERNEL := device/samsung/j2corelte/Image
+TARGET_PREBUILT_KERNEL := device/samsung/j2corelte/kernel
 TARGET_PREBUILT_DTB := device/samsung/j2corelte/dt.img
 
 #BOOT image 
