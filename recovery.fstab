@@ -6,6 +6,7 @@
 /cache		ext4	/dev/block/platform/bootdevice/by-name/CACHE
 /preload    ext4    /dev/block/platform/bootdevice/by-name/HIDDEN
 /modem		emmc	/dev/block/platform/bootdevice/by-name/RADIO	flags=backup=1;display="Baseband"
+/modem_debug	emmc	/dev/block/platform/bootdevice/by-name/CP_DEBUG	flags=backup=1;display="Baseband (Debug)";subpartitionof=/modem
 /efs		ext4	/dev/block/platform/bootdevice/by-name/EFS	flags=backup=1;display="EFS"
 /cpefs      ext4    /dev/block/platform/bootdevice/by-name/CPEFS flags=backup=1;display="CPEFS";subpartitionof=/efs
 /vendor         ext4    /dev/block/platform/bootdevice/by-name/vendor  flags=backup=1
