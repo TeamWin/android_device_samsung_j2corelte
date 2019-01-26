@@ -6,7 +6,7 @@ TARGET_BOOTLOADER_BOARD_NAME := universal7570_go
 # Platform
 
 TARGET_BOARD_PLATFORM := exynos5
-TARGET_BOARD_PLATFORM_GPU := mali-t720
+TARGET_BOARD_PLATFORM_GPU := mali-t720mp2
 
 # Architecture
 TARGET_ARCH := arm
