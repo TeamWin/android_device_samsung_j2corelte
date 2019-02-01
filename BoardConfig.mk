@@ -16,11 +16,11 @@ TARGET_CPU_ABI2 :=
 TARGET_CPU_VARIANT := cortex-a53
 TARGET_CPU_SMP := true
 
-TARGET_ARCH := arm
-TARGET_ARCH_VARIANT := armv7-a-neon
-TARGET_CPU_ABI := armeabi-v7a
-TARGET_CPU_ABI2 := armeabi
-TARGET_CPU_VARIANT := cortex-a53
+TARGET_2ND_ARCH := arm
+TARGET_2ND_ARCH_VARIANT := armv7-a-neon
+TARGET_2ND_CPU_ABI := armeabi-v7a
+TARGET_2ND_CPU_ABI2 := armeabi
+TARGET_2ND_CPU_VARIANT := cortex-a53
 
 #Kernel
 
@@ -30,7 +30,8 @@ TARGET_USES_UNCOMPRESSED_KERNEL := true
 
 TARGET_PREBUILT_KERNEL := device/samsung/j2corelte/kernel
 TARGET_PREBUILT_DTB := device/samsung/j2corelte/dt.img
-TARGET_KERNEL_CONFIG := j2corelte_defconfig
+TARGET_KERNEL_CONFIG := j2corelte_01_defconfig
+TARGET_KERNEL_SOURCE := kernel/samsung/j2corelte
 
 #BOOT image 
 
