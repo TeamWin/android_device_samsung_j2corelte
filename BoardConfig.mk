@@ -29,8 +29,9 @@ TARGET_KERNEL_CONFIG := j2corelte_defconfig
 BOARD_KERNEL_CMDLINE := # Exynos doesn't take cmdline arguments from boot image
 BOARD_KERNEL_BASE := 0x10000000
 BOARD_KERNEL_PAGESIZE := 2048
+BOARD_KERNEL_SEPARATED_DT := true
 # 000RU = recovery kernel, 000KU = system kernel
-BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --tags_offset 0x00000100 --board SRPRF18A001RU
+BOARD_MKBOOTIMG_ARGS := --dt device/samsung/j2corelte/prebuilt/dt.img --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --tags_offset 0x00000100 --board SRPRF18A001RU
 BOARD_CUSTOM_BOOTIMG_MK :=  device/samsung/j2corelte/bootimg.mk
 
 # Partitions
@@ -50,7 +51,7 @@ TARGET_USERIMAGES_USE_F2FS := true
 
 
 # TWRP specific build flags
-TW_THEME := portrait_hdpi
+TW_THEME := portrait_mdpi
 RECOVERY_SDCARD_ON_DATA := true
 TARGET_RECOVERY_PIXEL_FORMAT := "ABGR_8888"
 #BOARD_HAS_NO_REAL_SDCARD := true
