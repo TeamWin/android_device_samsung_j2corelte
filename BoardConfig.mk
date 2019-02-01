@@ -1,3 +1,5 @@
+USE_NINJA := false
+
 #Bootloader 
 
 TARGET_NO_BOOTLOADER := true
@@ -32,6 +34,8 @@ TARGET_PREBUILT_KERNEL := device/samsung/j2corelte/kernel
 TARGET_PREBUILT_DTB := device/samsung/j2corelte/dt.img
 TARGET_KERNEL_CONFIG := j2corelte_01_defconfig
 TARGET_KERNEL_SOURCE := kernel/samsung/j2corelte
+TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
+KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9/bin
 
 #BOOT image 
 
@@ -60,6 +64,7 @@ TARGET_USERIMAGES_USE_F2FS := true
 
 
 # TWRP specific build flags
+RECOVERY_VARIANT := twrp
 TW_THEME := portrait_mdpi
 RECOVERY_SDCARD_ON_DATA := true
 TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
