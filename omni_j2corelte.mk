@@ -13,9 +13,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
      device/samsung/j2corelte/boot.img:boot.img
 
-PRODUCT_COPY_FILES += \
-     device/samsung/j2corelte/recovery.img:recovery.img
-
 PRODUCT_PACKAGES += \
 	charger_res_images \
 	charger
