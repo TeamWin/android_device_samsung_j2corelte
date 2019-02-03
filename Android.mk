@@ -23,8 +23,6 @@
 # *not* include it on all devices, so it is safe even with hardware-specific
 # components.
 
-$(make clean)
-
 ifneq ($(filter j2corelte j2coreltecis,$(TARGET_DEVICE)),)
 
 LOCAL_PATH := $(call my-dir)
