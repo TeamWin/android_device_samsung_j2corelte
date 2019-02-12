@@ -6,15 +6,14 @@ Build using minimal TWRP 8.1
 
 
 
-##Device configuration for Samsung Galaxy J2 Core (2018) (j2corelte)
+## Device configuration for Samsung Galaxy J2 Core (2018) (j2corelte)
 
-=====================================
 
 Basic   | Spec Sheet
 -------:|:-------------------------
 CPU     | Quad-core 1,4GHz Cortex-A53
 CHIPSET | Samsung Exynos 7 Quad 7570
-GPU     | Mali-T720MP2
+GPU     | Mali-T720
 Memory  | 1 GB
 Shipped Android Version | Android 8.1.0 GO Edition with Samsung Experience
 Storage | 8 GB
