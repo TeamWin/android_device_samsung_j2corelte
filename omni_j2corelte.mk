@@ -10,9 +10,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 $(call inherit-product, vendor/omni/config/common.mk)
 
 PRODUCT_COPY_FILES += \
-     $(LOCAL_PATH)/prebuilt/kernel:kernel \
+     $(LOCAL_PATH)/prebuilt/zImage:zImage \
      $(LOCAL_PATH)/prebuilt/dt.img:dt.img \
-     $(LOCAL_PATH)/boot.img:boot.img
+     $(LOCAL_PATH)/boot.img:boot.img \
+     $(OUT_DIR)arch/arm/boot/zImage:obj/KERNEL_OBJ/arch/arm64/boot/zImage
 
 PRODUCT_PACKAGES += \
 	charger_res_images \
