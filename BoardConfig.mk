@@ -39,12 +39,10 @@ TARGET_PREBUILT_KERNEL := device/samsung/j2corelte/prebuilt/Image
 TARGET_PREBUILT_DTB := device/samsung/j2corelte/prebuilt/dt.img
 
 # Building kernel from source
-CC := gcc
 TARGET_KERNEL_CONFIG := j2corelte_01_defconfig
 TARGET_KERNEL_SOURCE := kernel/samsung/j2corelte
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9/bin
-CROSS_COMPILE := $(ANDROID_BUILD_TOP)/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9/bin/aarch64-linux-android-
 
 #BOOT image 
 BOARD_CUSTOM_BOOTIMG_MK :=  device/samsung/j2corelte/bootimg.mk
@@ -84,7 +82,7 @@ TW_NO_REBOOT_BOOTLOADER := true
 TW_HAS_DOWNLOAD_MODE := true
 TW_INCLUDE_NTFS_3G := true
 LZMA_RAMDISK_TARGETS := recovery
-TW_USE_NEW_MINADBD := true
+#TW_USE_NEW_MINADBD := true
 
 # Encryption support
 #TW_INCLUDE_CRYPTO := true
