@@ -29,11 +29,11 @@ TARGET_PREBUILT_KERNEL := device/samsung/j2corelte/prebuilt/Image
 TARGET_PREBUILT_DTB := device/samsung/j2corelte/prebuilt/dt.img
 
 # Building kernel from source
-TARGET_KERNEL_CONFIG := j2corelte_01_defconfig
-TARGET_KERNEL_SOURCE := kernel/samsung/j2corelte
-TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
-KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9/bin
-CROSS_COMPILE := $(ANDROID_BUILD_TOP)/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9/bin
+#TARGET_KERNEL_CONFIG := j2corelte_01_defconfig
+#TARGET_KERNEL_SOURCE := kernel/samsung/j2corelte
+#TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
+#KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9/bin
+#CROSS_COMPILE := $(ANDROID_BUILD_TOP)/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9/bin
 
 #BOOT image 
 BOARD_CUSTOM_BOOTIMG_MK :=  device/samsung/j2corelte/bootimg.mk
@@ -46,13 +46,14 @@ BOARD_KERNEL_PAGESIZE := 2048
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --tags_offset 0x00000100 --board SRPRF18A001RU
 
 # Partitions
-BOARD_BOOTIMAGE_PARTITION_SIZE := 16851488
+BOARD_BOOTIMAGE_PARTITION_SIZE := 33554432
 BOARD_CACHEIMAGE_PARTITION_SIZE := 41943040
-BOARD_RECOVERYIMAGE_PARTITION_SIZE := 21066752
+BOARD_RECOVERYIMAGE_PARTITION_SIZE := 39845888
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1275068416
-BOARD_USERDATAIMAGE_PARTITION_SIZE := 5905580032  
+BOARD_USERDATAIMAGE_PARTITION_SIZE := 5905580032
+BOARD_VENDORIMAGE_PARTITION_SIZE := 184549376
+BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4  
 BOARD_FLASH_BLOCK_SIZE := 131072
-
 
 # File System
 # Use this flag if the board has a ext4 partition larger than 2gb
@@ -60,6 +61,9 @@ BOARD_HAS_LARGE_FILESYSTEM := true
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 
+# Workaround for error copying vendor files to recovery ramdisk
+BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
+TARGET_COPY_OUT_VENDOR := vendor
 
 # TWRP specific build flags
 TW_THEME := portrait_mdpi
